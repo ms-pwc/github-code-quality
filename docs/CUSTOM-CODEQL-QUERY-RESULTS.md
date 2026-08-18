@@ -50,6 +50,82 @@ Direct link:
 
 <https://github.com/ms-pwc/github-code-quality/security/code-scanning?query=ref%3Arefs%2Fheads%2Fcustom-codeql-queries-poc+is%3Aopen>
 
+## Verified result
+
+Run: <https://github.com/ms-pwc/github-code-quality/actions/runs/32140417137>
+
+Branch: `custom-codeql-queries-poc`
+
+Result: **47 open Code Scanning alerts** uploaded by CodeQL.
+
+This is much broader than the original `security-extended` result because this branch runs:
+
+1. Built-in `security-and-quality` queries.
+2. Local organization-specific SonarQube gap queries.
+
+### Custom organization query hits
+
+| Custom rule | Count | Why it matters for SonarQube migration |
+| --- | ---: | --- |
+| `ms-pwc/csharp/large-method` | 3 | Demonstrates an organization-specific maintainability guardrail for large/complex methods. |
+| `ms-pwc/csharp/empty-catch-block` | 1 | Demonstrates reliability/error-handling coverage. |
+| `ms-pwc/csharp/explicit-gc-collect` | 1 | Demonstrates a performance/reliability code-smell rule. |
+| `ms-pwc/csharp/lock-this` | 1 | Demonstrates a concurrency/reliability rule. |
+| `ms-pwc/csharp/string-concat-in-loop` | 1 | Demonstrates a performance/maintainability code-smell rule. |
+
+Custom-query total: **7 alerts**.
+
+### Built-in `security-and-quality` examples also surfaced
+
+| Rule family | Example count |
+| --- | ---: |
+| Constant condition | 2 |
+| Simplifiable Boolean expression | 2 |
+| Possible null dereference | 2 |
+| Self-assignment | 2 |
+| Missing dispose | 1 |
+| Invalid string formatting | 1 |
+| Off-by-one index | 1 |
+| Empty collection | 1 |
+| Unused collection | 1 |
+| Lock on `this` | 1 |
+| Explicit `GC.Collect()` | 1 |
+| String concatenation in loop | 1 |
+
+Security findings such as SQL injection, command injection, path traversal, unsafe XML, regex injection, unsafe redirect, cookie security, log forging, and ECB encryption also remain visible in Code Scanning.
+
+## What this proves
+
+Use this wording in the demonstration:
+
+> The original CodeQL security workflow does not try to reproduce every SonarQube quality rule. When we need more SonarQube-like checks, we can extend CodeQL with built-in `security-and-quality` queries and organization-specific query packs. In this branch, the same POC source produced 47 GitHub Code Scanning alerts, including 7 alerts from custom organization rules.
+
+## What this still does not prove
+
+This does **not** mean every SonarQube issue is now reproduced exactly.
+
+Still not exact native parity:
+
+- SonarQube duplication percentage and duplicated-block metrics.
+- Aggregate cyclomatic/cognitive complexity totals.
+- Technical-debt remediation minutes.
+- Exact Security Hotspot reviewed metric and workflow.
+- Centralized inherited Quality Profile model.
+- Every custom Sonar rule unless it is explicitly rewritten as a CodeQL query or custom check.
+
+## Recommended production pattern
+
+For a real organization migration:
+
+1. Export SonarQube rules and Quality Gate conditions.
+2. Map built-in GitHub coverage first: CodeQL, Code Quality, coverage, rulesets.
+3. For remaining mandatory rules, create a CodeQL query pack.
+4. Test each query with positive and negative fixtures.
+5. Publish the query pack to GitHub Container Registry.
+6. Reference the pack in CodeQL workflows or a shared CodeQL config.
+7. Make CodeQL alerts part of the ruleset merge policy.
+8. Keep a mapping table from each SonarQube custom rule to the replacement CodeQL query ID.
+
 ## Important explanation for the demo
 
 Use this wording:
