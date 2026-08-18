@@ -10,7 +10,7 @@ Expected results after GitHub finishes scanning `main`:
 - **Code scanning:** command injection and path traversal alerts.
 - **Dependabot vulnerabilities:** a known-vulnerable historical
   `Newtonsoft.Json` package version.
-- **Secret scanning:** two distinct, invalid GitHub-token-shaped strings.
+- **Secret scanning:** invalid GitHub-, Slack-, and Stripe-token-shaped strings.
 
 The token-shaped strings are synthetic random text, have never authenticated,
 and are intentionally bypassed with GitHub's `used_in_tests` reason. No real
