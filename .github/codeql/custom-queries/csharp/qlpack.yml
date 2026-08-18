@@ -1,0 +1,5 @@
+name: ms-pwc/csharp-sonarqube-gap-queries
+version: 0.0.1
+extractor: csharp
+dependencies:
+  codeql/csharp-all: "*"

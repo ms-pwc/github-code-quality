@@ -1,0 +1,7 @@
+name: Custom CodeQL configuration with SonarQube gap queries
+
+queries:
+  - name: Built-in CodeQL security and quality suite
+    uses: security-and-quality
+  - name: Local organization SonarQube gap queries
+    uses: ./.github/codeql/custom-queries/csharp
