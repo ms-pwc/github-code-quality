@@ -18,4 +18,6 @@ credential is stored here.
 
 The **Dependabot Malware** view remains empty intentionally. Adding a malware
 package merely to manufacture an alert is unsafe and is not part of this POC.
-AI findings are non-deterministic and cannot be forced to produce a result.
+AI findings are enabled with `ai_findings_option: on_push`, and semantic logic
+defects were submitted in a completed managed scan. AI output is
+non-deterministic and cannot be forced to produce a result.
