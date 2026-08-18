@@ -1,0 +1,5 @@
+# Require repository maintainers to review changes to security and quality policy.
+/.github/ @v-naveshetty
+/docs/ @v-naveshetty
+/scripts/ @v-naveshetty
+/src/QualityDemo.Api/Controllers/ @v-naveshetty
