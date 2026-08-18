@@ -10,7 +10,7 @@ combined control plane, not CodeQL alone.
 | CodeQL advanced setup | Security vulnerabilities and pull-request annotations using the `security-extended` query suite. |
 | GitHub Code Quality | Managed C# maintainability/reliability analysis, scores, PR comments, and autofix where available. |
 | Built-in code coverage | Cobertura upload, branch percentage, default-branch comparison, and per-file delta. |
-| Repository ruleset | Merge control for CodeQL, Code Quality severity, coverage, CI checks, and review policy. |
+| Repository ruleset | Merge control for CodeQL, CI coverage gate, required checks, and review policy. |
 | Secret scanning + push protection | Detect and prevent supported provider and non-provider secret patterns. |
 | Dependabot + dependency review | Dependency alerts, updates, and PR change policy. |
 
@@ -36,11 +36,11 @@ Run date: **18 August 2026**. Pull request:
 | --- | --- |
 | CodeQL security | 11 open alerts: 2 critical, 4 high, and 5 medium. |
 | GitHub Code Quality | 10 inline findings from `github-code-quality[bot]`: 9 reliability and 1 maintainability. |
-| Coverage | 3% on `github-native-poc` versus 35% on the initial `main` baseline; a 32-point drop. |
+| Coverage | 3% on `github-native-poc` versus 100% on `main`; a 97-point drop. The explicit 80% check failed. |
 | Safe tests | 6 passed; no vulnerable method was executed. |
 | Dependency review | Passed; no vulnerable dependency change was introduced. |
 | Secret scanning | Enabled with push protection; 0 open alerts. |
-| Merge result | **Blocked** by the active ruleset and failing CodeQL security check. |
+| Merge result | **Blocked** by the active ruleset, failing CodeQL security check, and failing coverage check. |
 
 Representative Code Quality findings included definite null dereference,
 off-by-one array access, invalid formatting, self-assignment, an unread
@@ -75,20 +75,21 @@ or `security_hotspots_reviewed` metric. Do not call this one-to-one parity.
 
 ## Quality and coverage gates
 
-The POC policy targets:
+The active POC policy enforces:
 
-- block Code Quality findings at **warning or higher**;
 - require CodeQL results and block **high or higher** security alerts;
 - require the CI check;
 - minimum branch coverage of **80%**;
-- maximum coverage drop of **1 percentage point**; and
+- require dependency review; and
 - one approving review plus resolved conversations.
 
 GitHub's **Require code quality results** and **Restrict code coverage** rules
 are product-managed rules. The coverage restriction is currently public
-preview. Calibrate in evaluate mode before production enforcement; this public
-POC activates the normal merge controls only after checks exist so the default
-branch cannot be accidentally locked.
+preview. A target policy of warnings-and-higher and maximum one-point coverage
+drop is documented, but those two managed rule types were not available in the
+public repository-rules REST schema during this run. They are therefore not
+claimed as API-verified controls. The POC uses the required 80% workflow check
+for enforceable coverage and preserves the limitation explicitly.
 
 The active ruleset is
 <https://github.com/ms-pwc/github-code-quality/rules/20972666>. It requires a

@@ -1,7 +1,7 @@
 {
-  "repository": "ms-pwc/github-code-quality",
-  "capturedAtUtc": "2026-08-18T06:06:05.9126828Z",
   "branch": "github-native-poc",
+  "repository": "ms-pwc/github-code-quality",
+  "sourceRevision": "52e9a5f49b6542bc17cfdf8e33b7d99114e8d3c6",
   "pullRequest": 1,
-  "sourceRevision": "03a1e68af7d47f9597d9737c3f51ad911eba1f9d"
+  "capturedAtUtc": "2026-08-18T06:38:18.1553951Z"
 }
