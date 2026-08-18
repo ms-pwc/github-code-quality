@@ -3,6 +3,32 @@
 This document applies to `sonarqube-poc`. The scanner runs locally because a
 GitHub-hosted runner cannot reach a workstation-only SonarQube server.
 
+## Verified POC environment and result
+
+Run date: **18 August 2026**.
+
+| Item | Verified value |
+| --- | --- |
+| SonarQube | Community Build 26.8.0.126808 |
+| Runtime | Microsoft OpenJDK 21.0.12 |
+| Scanner | SonarScanner for .NET 11.2.1 |
+| Project key | `github-code-quality-poc` |
+| Tests | 6 passed; vulnerable methods were not executed |
+| Quality gate | **Failed** (`ERROR`) as intended |
+| Bugs / reliability | 8 Bugs; reliability rating E (5.0); 10 reliability impacts |
+| Vulnerabilities / security | 10 Vulnerabilities; security rating E (5.0) |
+| Code smells / maintainability | 52 Code Smells; 51 maintainability impacts |
+| Technical debt | 343 minutes of maintainability remediation effort |
+| Coverage | 2.7%; 193 of 199 lines uncovered |
+| Duplication | 21.6%; 118 duplicated lines in 2 blocks |
+| Complexity | 92 cyclomatic; 51 cognitive |
+| Total issues | 70: 5 Blocker, 4 Critical, 25 Major, 34 Minor, and 2 Info |
+
+The failed gate recorded errors for overall reliability, security, coverage,
+duplication, and issue count, plus new-code coverage and duplication. Overall
+conditions are intentional in this one-project POC so the first comparison scan
+can fail; production gates should normally emphasize new code.
+
 ## Prerequisites
 
 - SonarQube Community Build or SonarQube Server is running and reports `UP` at
@@ -62,7 +88,7 @@ are never written to evidence files.
 | Security vulnerabilities | Project **Issues**, filter **Software qualities → Security** |
 | Reliability bugs | Project **Issues**, filter **Software qualities → Reliability** |
 | Maintainability/code smells | Project **Issues**, filter **Software qualities → Maintainability** |
-| Hotspot review | Project **Security Hotspots**; review each as acknowledged/fixed/safe according to policy |
+| Hotspot review | Project **Security Hotspots**; see the version limitation below |
 | Coverage and duplication | Project **Measures** |
 | Complexity and technical debt | Project **Measures** and issue remediation effort |
 | Active rules/profile | **Quality Profiles → C# → Sonar way** (or the assigned custom profile) |
@@ -74,3 +100,19 @@ SonarQube branch and pull-request analysis and some advanced security/reporting
 features are edition-dependent. This POC uses a dedicated local project for the
 `sonarqube-poc` checkout, so commercial branch analysis is not required for the
 core comparison.
+
+## Security Hotspot runtime limitation
+
+The installed 26.8 C# rule catalog reports **zero rules of type
+`SECURITY_HOTSPOT`**. SonarSource is transitioning rules that formerly produced
+hotspots into vulnerabilities/security issues. Consequently, this verified scan
+reported 0 hotspots and no item was available to move through To review,
+Acknowledged, Fixed, or Safe. Switching the instance to Standard Experience did
+not change the catalog/API classification.
+
+The project gate retains the 100%-reviewed-hotspots condition, but it has no
+actual value and therefore does not appear in the evaluated conditions. This is
+a real version-specific validation result, not hidden parity. Use a supported
+SonarQube version/rule catalog that still emits hotspots if an empirical hotspot
+review screenshot is mandatory; otherwise compare GitHub alert triage only as
+an operational substitute, not one-to-one parity.

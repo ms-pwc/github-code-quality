@@ -2,6 +2,7 @@
 param(
     [string]$HostUrl = "http://localhost:9000",
     [string]$ProjectKey = "github-code-quality-poc",
+    [string]$GateName = "POC - SonarQube vs GitHub",
     [string]$OutputDirectory = "docs/evidence/sonarqube"
 )
 
@@ -47,20 +48,32 @@ $metrics = @(
     "uncovered_lines",
     "duplicated_lines_density",
     "duplicated_blocks",
+    "duplicated_lines",
     "complexity",
     "cognitive_complexity",
-    "ncloc"
+    "ncloc",
+    "violations"
 ) -join ","
 
 Save-SonarResponse -Name "measures" -Path "/api/measures/component?component=$encodedProject&metricKeys=$metrics"
 Save-SonarResponse -Name "quality-gate" -Path "/api/qualitygates/project_status?projectKey=$encodedProject"
+Save-SonarResponse -Name "quality-gate-definition" -Path "/api/qualitygates/show?name=$([Uri]::EscapeDataString($GateName))"
 Save-SonarResponse -Name "issues" -Path "/api/issues/search?componentKeys=$encodedProject&ps=500&additionalFields=_all"
+Save-SonarResponse -Name "system-status" -Path "/api/system/status"
 
 try {
     Save-SonarResponse -Name "security-hotspots" -Path "/api/hotspots/search?projectKey=$encodedProject&ps=500"
 }
 catch {
     Write-Warning "Security hotspot export was not available: $($_.Exception.Message)"
+}
+
+try {
+    $mode = Invoke-RestMethod -Method Get -Uri "$HostUrl/api/v2/clean-code-policy/mode" -Headers @{ Authorization = "Bearer $token" }
+    $mode | ConvertTo-Json -Depth 10 | Set-Content -Path (Join-Path $outputPath "instance-mode.json") -Encoding utf8
+}
+catch {
+    Write-Warning "Instance-mode export was not available: $($_.Exception.Message)"
 }
 
 @{

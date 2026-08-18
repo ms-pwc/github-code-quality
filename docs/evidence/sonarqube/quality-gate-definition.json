@@ -1,0 +1,112 @@
+{
+  "name": "POC - SonarQube vs GitHub",
+  "conditions": [
+    {
+      "id": "cdd9a1a1-b9c0-4215-b07b-3bf9ee9e82de",
+      "metric": "new_duplicated_lines_density",
+      "op": "GT",
+      "error": "3",
+      "isCaycCondition": true
+    },
+    {
+      "id": "07ada24d-5692-428c-92a2-061d185332dc",
+      "metric": "new_coverage",
+      "op": "LT",
+      "error": "80",
+      "isCaycCondition": true
+    },
+    {
+      "id": "2f8cfed2-5502-4790-b061-623926c235ac",
+      "metric": "new_violations",
+      "op": "GT",
+      "error": "0",
+      "isCaycCondition": true
+    },
+    {
+      "id": "93d8031c-4124-47e1-b3b3-1ce48cfc4081",
+      "metric": "new_security_hotspots_reviewed",
+      "op": "LT",
+      "error": "100",
+      "isCaycCondition": true
+    },
+    {
+      "id": "9b7d1a2f-afe7-4027-adf7-55908d43a3cf",
+      "metric": "new_reliability_rating",
+      "op": "GT",
+      "error": "1",
+      "isCaycCondition": true
+    },
+    {
+      "id": "51c5c862-9f67-47b8-8bac-88622102c25b",
+      "metric": "new_security_rating",
+      "op": "GT",
+      "error": "1",
+      "isCaycCondition": true
+    },
+    {
+      "id": "2605355a-3392-4f9d-810c-3d7bb1bf777c",
+      "metric": "new_maintainability_rating",
+      "op": "GT",
+      "error": "1",
+      "isCaycCondition": true
+    },
+    {
+      "id": "50237e5b-ba67-4b68-a2cc-8124008a8771",
+      "metric": "reliability_rating",
+      "op": "GT",
+      "error": "1",
+      "isCaycCondition": false
+    },
+    {
+      "id": "6555d86c-3dfa-48bd-a55d-f32a281029d2",
+      "metric": "security_rating",
+      "op": "GT",
+      "error": "1",
+      "isCaycCondition": false
+    },
+    {
+      "id": "c46abd53-550d-4f0f-8676-d641c3951c89",
+      "metric": "coverage",
+      "op": "LT",
+      "error": "80",
+      "isCaycCondition": false
+    },
+    {
+      "id": "73800efa-4084-4e84-b352-f6e1804c7f5a",
+      "metric": "duplicated_lines_density",
+      "op": "GT",
+      "error": "3",
+      "isCaycCondition": false
+    },
+    {
+      "id": "d3da52a8-3f2f-4e2f-8a7b-d683b2d0be57",
+      "metric": "security_hotspots_reviewed",
+      "op": "LT",
+      "error": "100",
+      "isCaycCondition": false
+    },
+    {
+      "id": "f01e2635-df45-4da6-8415-08c6b365d294",
+      "metric": "violations",
+      "op": "GT",
+      "error": "0",
+      "isCaycCondition": false
+    }
+  ],
+  "isBuiltIn": false,
+  "actions": {
+    "rename": true,
+    "setAsDefault": true,
+    "copy": true,
+    "associateProjects": true,
+    "delete": true,
+    "manageConditions": true,
+    "delegate": true,
+    "manageAiCodeAssurance": false
+  },
+  "caycStatus": "over-compliant",
+  "isDefault": false,
+  "hasStandardConditions": true,
+  "hasMQRConditions": false,
+  "isAiCodeSupported": false
+}

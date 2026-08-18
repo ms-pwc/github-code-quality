@@ -1,0 +1,4692 @@
+{
+  "total": 70,
+  "p": 1,
+  "ps": 500,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 500,
+    "total": 70
+  },
+  "effortTotal": 548,
+  "issues": [
+    {
+      "key": "75bee118-ef90-46f9-9758-e745683fcbba",
+      "rule": "secrets:S6703",
+      "severity": "BLOCKER",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 15,
+      "hash": "be9ba9a0b96ea0a5bd36800ca419db54",
+      "textRange": {
+        "startLine": 15,
+        "endLine": 15,
+        "startOffset": 65,
+        "endOffset": 86
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make sure this database password gets changed and removed from the code.",
+      "effort": "30min",
+      "debt": "30min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "secret"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "0a885753-5124-494b-9318-e3b913c092d2",
+      "rule": "csharpsquid:S2077",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 31,
+      "hash": "bd36e2239ae3ae45149c4215a28d3bd9",
+      "textRange": {
+        "startLine": 31,
+        "endLine": 31,
+        "startOffset": 8,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a parameterized query instead of string formatting.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "bad-practice",
+        "former-hotspot",
+        "sql"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        },
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "532819ac-4db2-4c81-8d57-1d2684e7cf41",
+      "rule": "csharpsquid:S6962",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 61,
+      "hash": "ddbd7d78461d002674ac38159c0ce005",
+      "textRange": {
+        "startLine": 61,
+        "endLine": 61,
+        "startOffset": 21,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Reuse HttpClient instances rather than create new ones with each controller action invocation.",
+      "effort": "1h",
+      "debt": "1h",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "asp.net"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "ab82497e-d8f6-40b8-8707-57a2eb28d636",
+      "rule": "csharpsquid:S2755",
+      "severity": "BLOCKER",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 86,
+      "hash": "c3ee642594edb8577ad72244257cc2b8",
+      "textRange": {
+        "startLine": 86,
+        "endLine": 86,
+        "startOffset": 27,
+        "endOffset": 59
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+              "textRange": {
+                "startLine": 82,
+                "endLine": 82,
+                "startOffset": 12,
+                "endOffset": 47
+              },
+              "msg": "This value enables external entities in XML parsing.",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+              "textRange": {
+                "startLine": 83,
+                "endLine": 83,
+                "startOffset": 12,
+                "endOffset": 46
+              },
+              "msg": "This value enables external entities in XML parsing.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Disable access to external entities in XML parsing.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "9ab9d8ae-3960-4e26-b618-9b6776fca87f",
+      "rule": "csharpsquid:S2755",
+      "severity": "BLOCKER",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 87,
+      "hash": "5b0abfeb479e9caf46d2b7373d08f94b",
+      "textRange": {
+        "startLine": 87,
+        "endLine": 87,
+        "startOffset": 23,
+        "endOffset": 77
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Disable access to external entities in XML parsing.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "7b894d0c-c685-4929-a0d8-6844ca64e9c4",
+      "rule": "csharpsquid:S6444",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 95,
+      "hash": "e0fd88790ac08994ac5c6b3305c12625",
+      "textRange": {
+        "startLine": 95,
+        "endLine": 95,
+        "startOffset": 15,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Pass a timeout to limit the execution time.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "regex",
+        "former-hotspot"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "3dddc5da-08fb-42e8-8f8b-21cf5d76eaa8",
+      "rule": "csharpsquid:S2629",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 101,
+      "hash": "69410593e74414f0ee8eaffe8d16a5e1",
+      "textRange": {
+        "startLine": 101,
+        "endLine": 101,
+        "startOffset": 31,
+        "endOffset": 66
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Don't use string concatenation in logging message templates.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "performance",
+        "logging"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "EFFICIENT",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "782f0a48-9615-45c2-8708-fbeebc3c0a65",
+      "rule": "external_roslyn:CA2254",
+      "severity": "INFO",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 101,
+      "hash": "69410593e74414f0ee8eaffe8d16a5e1",
+      "textRange": {
+        "startLine": 101,
+        "endLine": 101,
+        "startOffset": 31,
+        "endOffset": 66
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "0b2b5ba9-9014-4669-bd84-84cbdd343d13",
+      "rule": "csharpsquid:S2092",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 108,
+      "hash": "005a98a5ef439d672099411d702a597b",
+      "textRange": {
+        "startLine": 108,
+        "endLine": 113,
+        "startOffset": 54,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Set the 'Secure' flag on this cookie.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "privacy",
+        "former-hotspot"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "869d5ed2-c6ff-4de3-8bab-cf5f8facfc9e",
+      "rule": "csharpsquid:S3330",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "project": "github-code-quality-poc",
+      "line": 108,
+      "hash": "005a98a5ef439d672099411d702a597b",
+      "textRange": {
+        "startLine": 108,
+        "endLine": 113,
+        "startOffset": 54,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Set the 'HttpOnly' flag on this cookie.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "privacy",
+        "former-hotspot"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "290d0dba-2c3f-434c-8c02-9d64655c5cf4",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/DuplicatedBusinessRules.cs",
+      "project": "github-code-quality-poc",
+      "line": 6,
+      "hash": "a4ab03a574bd85f695f276991ff1a7bc",
+      "textRange": {
+        "startLine": 6,
+        "endLine": 6,
+        "startOffset": 19,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'Calculate' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "c369c6b8-999d-4e78-bd9f-0da1b53f8279",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/DuplicatedBusinessRules.cs",
+      "project": "github-code-quality-poc",
+      "line": 67,
+      "hash": "a4ab03a574bd85f695f276991ff1a7bc",
+      "textRange": {
+        "startLine": 67,
+        "endLine": 67,
+        "startOffset": 19,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'Calculate' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "160e7846-001b-42a9-b086-66220d9f57b3",
+      "rule": "csharpsquid:S2933",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 6,
+      "hash": "7999392b669c1937a85ae38dcbb543ff",
+      "textRange": {
+        "startLine": 6,
+        "endLine": 6,
+        "startOffset": 19,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make '_status' 'readonly'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "confusing"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "dac4f0aa-6570-41db-a3d8-1897a4164ed0",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 8,
+      "hash": "815297dd8a8cd8b1c8c48a4533af33b6",
+      "textRange": {
+        "startLine": 8,
+        "endLine": 8,
+        "startOffset": 16,
+        "endOffset": 46
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'ConstantAndRedundantConditions' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "2516e49c-ed8f-4efd-b2f5-0b5303f005f8",
+      "rule": "csharpsquid:S1125",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 12,
+      "hash": "c281a4cf9dd6d1c47f82ec77b7526a09",
+      "textRange": {
+        "startLine": 12,
+        "endLine": 12,
+        "startOffset": 27,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the unnecessary Boolean literal(s).",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "clumsy"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "609b5e4e-4832-4162-b3e4-ddbee90f05de",
+      "rule": "csharpsquid:S1125",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 12,
+      "hash": "c281a4cf9dd6d1c47f82ec77b7526a09",
+      "textRange": {
+        "startLine": 12,
+        "endLine": 12,
+        "startOffset": 46,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the unnecessary Boolean literal(s).",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "clumsy"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "365bc080-16e9-48aa-8727-a17677d00eca",
+      "rule": "external_roslyn:CS0162",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 15,
+      "hash": "d1fe4dae1118fe43410f233c92f0438e",
+      "textRange": {
+        "startLine": 15,
+        "endLine": 15,
+        "startOffset": 8,
+        "endOffset": 14
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Unreachable code detected",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "f954f87e-f219-4df7-bef9-ee7170564523",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 18,
+      "hash": "1539eb0e22b9040642c879ede2d90f07",
+      "textRange": {
+        "startLine": 18,
+        "endLine": 18,
+        "startOffset": 18,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'NestedConditions' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "b2dd6cb9-d17b-499f-9183-0c1ed999f169",
+      "rule": "csharpsquid:S1066",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 22,
+      "hash": "81fca2d47f5eb0d075c33012449a3279",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 12,
+        "endOffset": 14
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+              "textRange": {
+                "startLine": 20,
+                "endLine": 20,
+                "startOffset": 8,
+                "endOffset": 10
+              },
+              "msg": "Merge this if statement with its nested one.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Merge this if statement with the enclosing one.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "clumsy"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "c37ef11b-670b-43fb-8878-ef4c84f5d8b6",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 31,
+      "hash": "ecd639d31ccbcf570c45c1e7f3ba0232",
+      "textRange": {
+        "startLine": 31,
+        "endLine": 31,
+        "startOffset": 18,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'UselessAssignments' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "9b150544-940d-4b73-bce8-075031a12ee1",
+      "rule": "csharpsquid:S1854",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 33,
+      "hash": "05d805d41b9a32f22b78234e5a6e38ee",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 12,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this useless assignment to local variable 'result'.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "unused"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "696f8d51-d0b8-4e0b-acea-5662f09c6ba4",
+      "rule": "csharpsquid:S2201",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 35,
+      "hash": "ff831daa42f26d0de0816102d656e5fc",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 8,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the return value of method 'GetHashCode'.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "confusing",
+        "suspicious"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "e95746c0-6461-4fac-afaf-9319cd503224",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 39,
+      "hash": "b364b075239858c5a5538324a9f7d133",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 15,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'UnusedCollection' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "c5325108-a76e-484b-9274-426dad2e5d1e",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 53,
+      "hash": "a074c65c050d62526d33f50959ffb3fa",
+      "textRange": {
+        "startLine": 53,
+        "endLine": 53,
+        "startOffset": 18,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'ConcatenateInLoop' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "d2033279-a8e8-4605-ad56-ae613d1c589d",
+      "rule": "csharpsquid:S1643",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 58,
+      "hash": "7213995895d93a5ba4834513abe4eeb3",
+      "textRange": {
+        "startLine": 58,
+        "endLine": 58,
+        "startOffset": 12,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a StringBuilder instead.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "performance"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "EFFICIENT",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "8f213620-b8fc-4bf4-891d-c5da1f6a94e1",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 63,
+      "hash": "579d1b3e9933ecc972f1990d964b2e55",
+      "textRange": {
+        "startLine": 63,
+        "endLine": 63,
+        "startOffset": 19,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'ComplexPrice' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "a692fd91-e60c-4452-87d3-0d4fdc22d983",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 10,
+      "hash": "201ac3707279eb15936a55e12d38d567",
+      "textRange": {
+        "startLine": 10,
+        "endLine": 10,
+        "startOffset": 15,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'DereferenceAlwaysNull' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "83ef3cd2-05fc-43d3-9995-64ed2efd3229",
+      "rule": "external_roslyn:CS8602",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 13,
+      "hash": "3d1933c523b0b90e8c90cb339a54430e",
+      "textRange": {
+        "startLine": 13,
+        "endLine": 13,
+        "startOffset": 15,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Dereference of a possibly null reference.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "4c122526-2c65-4b84-9d2d-1695ec21b746",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 16,
+      "hash": "fe76543578d2cdbe0bc0de2c88bb4665",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 15,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'DereferenceMaybeNull' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "e3715b60-118e-4115-ad74-16f7c2c38bbb",
+      "rule": "external_roslyn:CS8602",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 19,
+      "hash": "b3ea08fd482a7376fe40f3acf1f1ac9b",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 19,
+        "startOffset": 15,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Dereference of a possibly null reference.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "e63defbf-0cad-4d57-b401-0a76ee11880d",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 22,
+      "hash": "e1da2e22958bb016140e04820a789df5",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 15,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'OffByOne' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "71d197b6-81f2-45be-aca4-e493678627f0",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 32,
+      "hash": "d9ab2a245c6d9f7147835f76bb3ddd51",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 16,
+        "endOffset": 38
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'CompareIdenticalValues' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "7e4a64f4-d37c-4771-a522-bb3422d4d086",
+      "rule": "external_roslyn:CS1718",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 34,
+      "hash": "45e1c87606cfe75f9909838e813fa737",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 15,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Comparison made to same variable; did you mean to compare something else?",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "95530da4-c51f-4b17-88e7-4915b82e4edd",
+      "rule": "csharpsquid:S1764",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 34,
+      "hash": "45e1c87606cfe75f9909838e813fa737",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 24,
+        "endOffset": 29
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+              "textRange": {
+                "startLine": 34,
+                "endLine": 34,
+                "startOffset": 15,
+                "endOffset": 20
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Correct one of the identical expressions on both sides of operator '=='.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "suspicious"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "aa960814-600b-48d5-aa97-3d2d9c1b5df2",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 37,
+      "hash": "c6fcbbde0a106f6d865bc2ffc8dd21db",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 16,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'ReferenceEqualsValueTypes' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "32532706-1c2d-4443-81b3-d561f15f571f",
+      "rule": "external_roslyn:CA2013",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 39,
+      "hash": "c8c2d602f15f413408be32d3acdcf7eb",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 31,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do not pass an argument with value type 'int' to 'ReferenceEquals'. Due to value boxing, this call to 'ReferenceEquals' can return an unexpected result. Consider using 'Equals' instead, or pass reference type arguments if you intend to use 'ReferenceEquals'.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "4af3ad53-30a6-4bda-a0ef-c29010415233",
+      "rule": "csharpsquid:S2995",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 39,
+      "hash": "c8c2d602f15f413408be32d3acdcf7eb",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 15,
+        "endOffset": 30
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a different kind of comparison for these value types.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "7101cec6-5c84-4502-9fec-2feaf960df45",
+      "rule": "external_roslyn:CA2013",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 39,
+      "hash": "c8c2d602f15f413408be32d3acdcf7eb",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 35,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do not pass an argument with value type 'int' to 'ReferenceEquals'. Due to value boxing, this call to 'ReferenceEquals' can return an unexpected result. Consider using 'Equals' instead, or pass reference type arguments if you intend to use 'ReferenceEquals'.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "44af5efa-cdff-4b84-9c0f-20b2cf455d2f",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 42,
+      "hash": "cc92d91ccdf494892b5914b772139e39",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 25,
+        "endOffset": 44
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'CharacterAsCapacity' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "90bee082-fa1e-4abb-86d0-2e5c92b6f0fe",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 47,
+      "hash": "aeba11dc3aa0bf559db793622a7e413f",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 18,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'InvalidFormatString' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "10804f38-f5f9-46bb-82df-df238db32948",
+      "rule": "csharpsquid:S2275",
+      "severity": "BLOCKER",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 49,
+      "hash": "dcb328abf1f9252b89938ff9b90777d2",
+      "textRange": {
+        "startLine": 49,
+        "endLine": 49,
+        "startOffset": 15,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Invalid string format, the highest string format item index should not be greater than the arguments count.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "35e0bd92-0a87-4309-9be1-24e0d14bc0d5",
+      "rule": "external_roslyn:CA2241",
+      "severity": "INFO",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 49,
+      "hash": "dcb328abf1f9252b89938ff9b90777d2",
+      "textRange": {
+        "startLine": 49,
+        "endLine": 49,
+        "startOffset": 15,
+        "endOffset": 73
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Provide correct arguments to formatting methods",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "a0da1fd2-58e3-4b7b-b3ae-718066337970",
+      "rule": "external_roslyn:CS1717",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 54,
+      "hash": "e6589fafc848a737a01ab4a7b4034bce",
+      "textRange": {
+        "startLine": 54,
+        "endLine": 54,
+        "startOffset": 8,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Assignment made to same variable; did you mean to assign something else?",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "dfd7120f-a9e9-4a5e-8dfb-4894fecc59f2",
+      "rule": "csharpsquid:S1656",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 54,
+      "hash": "e6589fafc848a737a01ab4a7b4034bce",
+      "textRange": {
+        "startLine": 54,
+        "endLine": 54,
+        "startOffset": 8,
+        "endOffset": 13
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+              "textRange": {
+                "startLine": 54,
+                "endLine": 54,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Remove or correct this useless self-assignment.",
+      "effort": "3min",
+      "debt": "3min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "35408df5-0780-4f1c-ad4e-f2c024d9392f",
+      "rule": "external_roslyn:CS1717",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 55,
+      "hash": "69c865e762c8d18e7ad95be5e11dbf5e",
+      "textRange": {
+        "startLine": 55,
+        "endLine": 55,
+        "startOffset": 8,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Assignment made to same variable; did you mean to assign something else?",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "7d3aac98-0b8a-4b09-a357-03fcc5b7b0c1",
+      "rule": "csharpsquid:S1656",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 55,
+      "hash": "69c865e762c8d18e7ad95be5e11dbf5e",
+      "textRange": {
+        "startLine": 55,
+        "endLine": 55,
+        "startOffset": 8,
+        "endOffset": 16
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+              "textRange": {
+                "startLine": 55,
+                "endLine": 55,
+                "startOffset": 19,
+                "endOffset": 27
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Remove or correct this useless self-assignment.",
+      "effort": "3min",
+      "debt": "3min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "4d04cf72-95f0-49e6-bae1-e4c3db75aca6",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 59,
+      "hash": "1c7e5807e0637b37f9808723a51a3c81",
+      "textRange": {
+        "startLine": 59,
+        "endLine": 59,
+        "startOffset": 15,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'MissingDispose' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "78edda04-4395-4673-a126-003f5a5f4c7f",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 65,
+      "hash": "a2def0ec2ce1c525a5fa66497890f300",
+      "textRange": {
+        "startLine": 65,
+        "endLine": 65,
+        "startOffset": 16,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'ImpossibleNegativeCount' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "ce99c965-c244-4817-b8ae-13c57e743f98",
+      "rule": "csharpsquid:S3981",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 68,
+      "hash": "87f663d0b1cd3d63773a588e829023d6",
+      "textRange": {
+        "startLine": 68,
+        "endLine": 68,
+        "startOffset": 15,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "The 'Count' of 'List<T>' always evaluates as 'False' regardless the size.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "confusing"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "b1afb768-6eb8-4066-86ac-f21e8358bd2c",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 71,
+      "hash": "0a2f456c713e9635710ed10538cae3be",
+      "textRange": {
+        "startLine": 71,
+        "endLine": 71,
+        "startOffset": 16,
+        "endOffset": 40
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'DangerousNonShortCircuit' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "45302bfb-b65f-4ccf-bf7d-04b6b0606f62",
+      "rule": "csharpsquid:S2178",
+      "severity": "BLOCKER",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 73,
+      "hash": "0e2d0005c0d583a1ecfbad6f9b3ca43b",
+      "textRange": {
+        "startLine": 73,
+        "endLine": 73,
+        "startOffset": 29,
+        "endOffset": 30
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Correct this '&' to '&&' and extract the right operand to a variable if it should always be evaluated.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "a012aa1a-9152-4b7d-87f1-a46f419cfba3",
+      "rule": "external_roslyn:CS8602",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 73,
+      "hash": "0e2d0005c0d583a1ecfbad6f9b3ca43b",
+      "textRange": {
+        "startLine": 73,
+        "endLine": 73,
+        "startOffset": 31,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Dereference of a possibly null reference.",
+      "effort": "0min",
+      "debt": "0min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "externalRuleEngine": "roslyn",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "6178b543-5223-4870-a315-238165afb3e7",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 76,
+      "hash": "798de91b4e4addc9e0ca79ea0acef082",
+      "textRange": {
+        "startLine": 76,
+        "endLine": 76,
+        "startOffset": 16,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'EmptyCatch' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "e0618e6c-059c-4be2-80af-7234c2c2ee9d",
+      "rule": "csharpsquid:S2486",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 82,
+      "hash": "a8982eb2a988054aa4d8d792dd074cca",
+      "textRange": {
+        "startLine": 82,
+        "endLine": 84,
+        "startOffset": 8,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Handle the exception or explain in a comment why it can be ignored.",
+      "effort": "1h",
+      "debt": "1h",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "error-handling",
+        "suspicious"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "da9f68e5-c896-4d8b-a992-79903d4d5e28",
+      "rule": "csharpsquid:S108",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 83,
+      "hash": "f95b70fdc3088560732a5ac135644506",
+      "textRange": {
+        "startLine": 83,
+        "endLine": 84,
+        "startOffset": 8,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either remove or fill this block of code.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "suspicious"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "d6a025a1-23b6-4acd-badc-e9764855841d",
+      "rule": "csharpsquid:S2551",
+      "severity": "CRITICAL",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 89,
+      "hash": "ee8d49fa158fb0fd04901014c2aceb14",
+      "textRange": {
+        "startLine": 89,
+        "endLine": 89,
+        "startOffset": 14,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Lock on a dedicated object instance instead.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "multi-threading"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "e02f6065-a105-4da7-83d7-552802bbda6d",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 95,
+      "hash": "340198db3f3aaf3319fc3a891da977f2",
+      "textRange": {
+        "startLine": 95,
+        "endLine": 95,
+        "startOffset": 16,
+        "endOffset": 38
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'ForceGarbageCollection' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "c0a83ea6-77ba-4050-8570-3380e1c144ab",
+      "rule": "csharpsquid:S1215",
+      "severity": "CRITICAL",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 97,
+      "hash": "b5d1a1e9632acff06d3b9bd38bec702b",
+      "textRange": {
+        "startLine": 97,
+        "endLine": 97,
+        "startOffset": 11,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Refactor the code to remove this use of 'GC.Collect'.",
+      "effort": "30min",
+      "debt": "30min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "performance",
+        "unpredictable",
+        "bad-practice"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "EFFICIENT",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "ec503eaf-322e-467a-93b8-41e282e4c590",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 11,
+      "hash": "11297f3a1b0e498e3dedb2f0aedcc235",
+      "textRange": {
+        "startLine": 11,
+        "endLine": 11,
+        "startOffset": 18,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'WeakPasswordHash' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "84ef6d5c-a51d-4923-8654-cf6e450ee8c1",
+      "rule": "csharpsquid:S4790",
+      "severity": "CRITICAL",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 13,
+      "hash": "a68aec799a68e4d636aa0055ab6cebd3",
+      "textRange": {
+        "startLine": 13,
+        "endLine": 13,
+        "startOffset": 20,
+        "endOffset": 63
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a stronger hashing algorithm.",
+      "effort": "30min",
+      "debt": "30min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "former-hotspot"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "01e8597e-0ac3-47da-a992-68186fe10de2",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 17,
+      "hash": "75f6d575e04a55d3659ca8504cd82132",
+      "textRange": {
+        "startLine": 17,
+        "endLine": 17,
+        "startOffset": 15,
+        "endOffset": 38
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'PredictableSecurityCode' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "c2f494b3-6f78-44a0-9a01-1740af1fbf8c",
+      "rule": "csharpsquid:S2245",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 19,
+      "hash": "7d00d877da2d5d4807d4cf7220568142",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 19,
+        "startOffset": 21,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a cryptographically strong random number generator.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "former-hotspot"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "3bc8c610-9f37-4702-9e91-5f146525bb01",
+      "rule": "csharpsquid:S4830",
+      "severity": "CRITICAL",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 27,
+      "hash": "1815c59bdf5fedb2d80af056929dc580",
+      "textRange": {
+        "startLine": 27,
+        "endLine": 27,
+        "startOffset": 12,
+        "endOffset": 53
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+              "textRange": {
+                "startLine": 27,
+                "endLine": 27,
+                "startOffset": 72,
+                "endOffset": 76
+              },
+              "msg": "This function trusts all certificates.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Enable server certificate validation on this SSL/TLS connection",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "cwe",
+        "privacy",
+        "ssl"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "a2d9276a-2654-4737-8dc0-1c77601fa0b8",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "project": "github-code-quality-poc",
+      "line": 32,
+      "hash": "1344a8281e444bfa2d5685d6c4fdb513",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 18,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'EncryptWithEcb' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:09:47+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "dcdce4a3-5ab9-4a32-9826-3b7cf210694e",
+      "rule": "csharpsquid:S6966",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Program.cs",
+      "project": "github-code-quality-poc",
+      "line": 17,
+      "hash": "2c00f42b764b8134043380893434076b",
+      "textRange": {
+        "startLine": 17,
+        "endLine": 17,
+        "startOffset": 0,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Await RunAsync instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "async-await"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:06:55+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "c34aa66d-0be6-43c7-aba4-f142af3a094f",
+      "rule": "csharpsquid:S1118",
+      "severity": "MAJOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Program.cs",
+      "project": "github-code-quality-poc",
+      "line": 19,
+      "hash": "8cd80b6bffff4d649b55f27fc0ef140a",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 19,
+        "startOffset": 21,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "design"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:06:55+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "6d05693c-f170-4de9-a4be-2fdb91e1582c",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SafeCalculator.cs",
+      "project": "github-code-quality-poc",
+      "line": 5,
+      "hash": "02380094500e1007d233f08c9feecbab",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 15,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'Add' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:06:55+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "ca709523-c735-4274-a2a8-3d2748904075",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SafeCalculator.cs",
+      "project": "github-code-quality-poc",
+      "line": 7,
+      "hash": "c9de80359b39fcd90d8aa77da51665c1",
+      "textRange": {
+        "startLine": 7,
+        "endLine": 7,
+        "startOffset": 15,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'Subtract' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:06:55+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "208bb0d5-8a70-4379-bbac-0189947448fc",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SafeCalculator.cs",
+      "project": "github-code-quality-poc",
+      "line": 9,
+      "hash": "a9bf9a38a0c159944e3f4719f6463508",
+      "textRange": {
+        "startLine": 9,
+        "endLine": 9,
+        "startOffset": 16,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'IsEven' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:06:55+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "08f03e3e-8585-4f88-a522-af046d95a745",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "github-code-quality-poc:src/QualityDemo.Api/Services/SafeCalculator.cs",
+      "project": "github-code-quality-poc",
+      "line": 11,
+      "hash": "a36a5e21b5d97aa0fcf66b863ca90a02",
+      "textRange": {
+        "startLine": 11,
+        "endLine": 11,
+        "startOffset": 19,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make 'Percentage' a static method.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "v-naveshetty@microsoft.com",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "accept",
+        "falsepositive",
+        "confirm",
+        "resolve",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2026-08-18T11:06:55+05:30",
+      "updateDate": "2026-08-18T11:44:32+05:30",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    }
+  ],
+  "components": [
+    {
+      "key": "github-code-quality-poc:src/QualityDemo.Api/Services/DuplicatedBusinessRules.cs",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "DuplicatedBusinessRules.cs",
+      "longName": "src/QualityDemo.Api/Services/DuplicatedBusinessRules.cs",
+      "path": "src/QualityDemo.Api/Services/DuplicatedBusinessRules.cs"
+    },
+    {
+      "key": "github-code-quality-poc:src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ReliabilityExamples.cs",
+      "longName": "src/QualityDemo.Api/Services/ReliabilityExamples.cs",
+      "path": "src/QualityDemo.Api/Services/ReliabilityExamples.cs"
+    },
+    {
+      "key": "github-code-quality-poc:src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MaintainabilityExamples.cs",
+      "longName": "src/QualityDemo.Api/Services/MaintainabilityExamples.cs",
+      "path": "src/QualityDemo.Api/Services/MaintainabilityExamples.cs"
+    },
+    {
+      "key": "github-code-quality-poc",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "GitHub Code Quality Comparison POC",
+      "longName": "GitHub Code Quality Comparison POC"
+    },
+    {
+      "key": "github-code-quality-poc:src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "SecurityHotspotExamples.cs",
+      "longName": "src/QualityDemo.Api/Services/SecurityHotspotExamples.cs",
+      "path": "src/QualityDemo.Api/Services/SecurityHotspotExamples.cs"
+    },
+    {
+      "key": "github-code-quality-poc:src/QualityDemo.Api/Services/SafeCalculator.cs",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "SafeCalculator.cs",
+      "longName": "src/QualityDemo.Api/Services/SafeCalculator.cs",
+      "path": "src/QualityDemo.Api/Services/SafeCalculator.cs"
+    },
+    {
+      "key": "github-code-quality-poc:src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "VulnerableController.cs",
+      "longName": "src/QualityDemo.Api/Controllers/VulnerableController.cs",
+      "path": "src/QualityDemo.Api/Controllers/VulnerableController.cs"
+    },
+    {
+      "key": "github-code-quality-poc:src/QualityDemo.Api/Program.cs",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Program.cs",
+      "longName": "src/QualityDemo.Api/Program.cs",
+      "path": "src/QualityDemo.Api/Program.cs"
+    }
+  ],
+  "rules": [
+    {
+      "key": "csharpsquid:S2486",
+      "name": "Generic exceptions should not be ignored",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S3981",
+      "name": "Collection sizes and array length comparisons should make sense",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2092",
+      "name": "Cookies should have the \"secure\" flag",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2629",
+      "name": "Logging templates should be constant",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S1215",
+      "name": "\"GC.Collect\" should not be called",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2077",
+      "name": "SQL queries should not be dynamically formatted",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S1643",
+      "name": "Strings should not be concatenated using '+' in a loop",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2201",
+      "name": "Methods without side effects should not have their return values ignored",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S108",
+      "name": "Nested blocks of code should not be left empty",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S1656",
+      "name": "Variables should not be self-assigned",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S6962",
+      "name": "You should pool HTTP connections with HttpClientFactory",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "external_roslyn:CS1717",
+      "name": "Assignment made to same variable",
+      "lang": "",
+      "status": "READY"
+    },
+    {
+      "key": "external_roslyn:CA2254",
+      "name": "Template should be a static expression",
+      "lang": "",
+      "status": "READY"
+    },
+    {
+      "key": "csharpsquid:S2275",
+      "name": "Composite format strings should not lead to unexpected behavior at runtime",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "external_roslyn:CS0162",
+      "name": "Unreachable code detected",
+      "lang": "",
+      "status": "READY"
+    },
+    {
+      "key": "csharpsquid:S6444",
+      "name": "Regular expressions should be executed with a timeout",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "external_roslyn:CA2013",
+      "name": "Do not use ReferenceEquals with value types",
+      "lang": "",
+      "status": "READY"
+    },
+    {
+      "key": "csharpsquid:S4830",
+      "name": "Server certificates should be verified during SSL/TLS connections",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S3330",
+      "name": "Cookies should have the \"HttpOnly\" flag",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S1854",
+      "name": "Unused assignments should be removed",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2995",
+      "name": "\"Object.ReferenceEquals\" should not be used for value types",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S1118",
+      "name": "Utility classes should not have public constructors",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "external_roslyn:CS8602",
+      "name": "Dereference of a possibly null reference.",
+      "lang": "",
+      "status": "READY"
+    },
+    {
+      "key": "external_roslyn:CA2241",
+      "name": "Provide correct arguments to formatting methods",
+      "lang": "",
+      "status": "READY"
+    },
+    {
+      "key": "csharpsquid:S1125",
+      "name": "Boolean literals should not be redundant",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2755",
+      "name": "XML parsers should not be vulnerable to XXE attacks",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S1764",
+      "name": "Identical expressions should not be used on both sides of operators",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S1066",
+      "name": "Mergeable \"if\" statements should be combined",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S4790",
+      "name": "Weak hashing algorithms should not be used",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2245",
+      "name": "Pseudorandom number generators (PRNGs) should not be used in security contexts",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2325",
+      "name": "Methods and properties that don't access instance data should be static",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "secrets:S6703",
+      "name": "Database passwords should not be disclosed",
+      "lang": "secrets",
+      "status": "READY",
+      "langName": "Secrets"
+    },
+    {
+      "key": "csharpsquid:S2178",
+      "name": "Short-circuit logic should be used in boolean contexts",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S6966",
+      "name": "Awaitable method should be used",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2551",
+      "name": "Shared resources should not be used for locking",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "csharpsquid:S2933",
+      "name": "Fields that are only assigned in the constructor should be \"readonly\"",
+      "lang": "cs",
+      "status": "READY",
+      "langName": "C#"
+    },
+    {
+      "key": "external_roslyn:CS1718",
+      "name": "Comparison made to same variable",
+      "lang": "",
+      "status": "READY"
+    }
+  ],
+  "users": [
+    {
+      "login": "admin",
+      "name": "Administrator",
+      "active": true
+    }
+  ],
+  "languages": [
+    {
+      "key": "py",
+      "name": "Python"
+    },
+    {
+      "key": "ipynb",
+      "name": "IPython Notebooks"
+    },
+    {
+      "key": "go",
+      "name": "Go"
+    },
+    {
+      "key": "kotlin",
+      "name": "Kotlin"
+    },
+    {
+      "key": "terraform",
+      "name": "Terraform"
+    },
+    {
+      "key": "cloudformation",
+      "name": "CloudFormation"
+    },
+    {
+      "key": "kubernetes",
+      "name": "Kubernetes"
+    },
+    {
+      "key": "docker",
+      "name": "Docker"
+    },
+    {
+      "key": "azureresourcemanager",
+      "name": "Azure Resource Manager"
+    },
+    {
+      "key": "yaml",
+      "name": "YAML"
+    },
+    {
+      "key": "json",
+      "name": "JSON"
+    },
+    {
+      "key": "js",
+      "name": "JavaScript"
+    },
+    {
+      "key": "ts",
+      "name": "TypeScript"
+    },
+    {
+      "key": "css",
+      "name": "CSS"
+    },
+    {
+      "key": "ruby",
+      "name": "Ruby"
+    },
+    {
+      "key": "scala",
+      "name": "Scala"
+    },
+    {
+      "key": "rust",
+      "name": "Rust"
+    },
+    {
+      "key": "cs",
+      "name": "C#"
+    },
+    {
+      "key": "java",
+      "name": "Java"
+    },
+    {
+      "key": "web",
+      "name": "HTML"
+    },
+    {
+      "key": "jsp",
+      "name": "JSP"
+    },
+    {
+      "key": "flex",
+      "name": "Flex"
+    },
+    {
+      "key": "xml",
+      "name": "XML"
+    },
+    {
+      "key": "php",
+      "name": "PHP"
+    },
+    {
+      "key": "text",
+      "name": "Text"
+    },
+    {
+      "key": "secrets",
+      "name": "Secrets"
+    },
+    {
+      "key": "vbnet",
+      "name": "VB.NET"
+    }
+  ],
+  "facets": []
+}

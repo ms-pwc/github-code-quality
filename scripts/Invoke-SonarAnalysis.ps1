@@ -23,6 +23,13 @@ $coveragePrefix = Join-Path $coverageDirectory "coverage"
 $coveragePath = "$coveragePrefix.opencover.xml"
 New-Item -ItemType Directory -Path $coverageDirectory -Force | Out-Null
 
+$scannerDirectory = Join-Path $repositoryRoot ".sonarqube"
+if (Test-Path $scannerDirectory) {
+    Get-ChildItem $scannerDirectory -Recurse -Force -File -ErrorAction SilentlyContinue |
+        ForEach-Object { $_.IsReadOnly = $false }
+    Remove-Item $scannerDirectory -Recurse -Force
+}
+
 Write-Host "Restoring the pinned SonarScanner for .NET tool."
 dotnet tool restore --configfile NuGet.config
 if ($LASTEXITCODE -ne 0) { throw "dotnet tool restore failed with exit code $LASTEXITCODE." }
