@@ -52,36 +52,47 @@ else {
 $gates = Invoke-SonarGet -Path "/api/qualitygates/list"
 $gate = $gates.qualitygates | Where-Object { $_.name -eq $GateName } | Select-Object -First 1
 if ($null -eq $gate) {
-    $createdGate = Invoke-SonarPost -Path "/api/qualitygates/create" -Body @{ name = $GateName }
-    $gateId = $createdGate.id
+    $null = Invoke-SonarPost -Path "/api/qualitygates/create" -Body @{ name = $GateName }
     Write-Host "Created quality gate '$GateName'."
-
-    $conditions = @(
-        @{ metric = "new_reliability_rating"; op = "GT"; error = "1" },
-        @{ metric = "new_security_rating"; op = "GT"; error = "1" },
-        @{ metric = "new_maintainability_rating"; op = "GT"; error = "1" },
-        @{ metric = "new_coverage"; op = "LT"; error = "80" },
-        @{ metric = "new_duplicated_lines_density"; op = "GT"; error = "3" },
-        @{ metric = "new_security_hotspots_reviewed"; op = "LT"; error = "100" }
-    )
-
-    foreach ($condition in $conditions) {
-        try {
-            $null = Invoke-SonarPost -Path "/api/qualitygates/create_condition" -Body @{
-                gateId = $gateId
-                metric = $condition.metric
-                op = $condition.op
-                error = $condition.error
-            }
-        }
-        catch {
-            Write-Warning "Could not add gate condition '$($condition.metric)'. The installed edition/version may not expose that metric: $($_.Exception.Message)"
-        }
-    }
 }
 else {
-    $gateId = $gate.id
     Write-Host "Quality gate '$GateName' already exists."
+}
+
+$conditions = @(
+    @{ metric = "reliability_rating"; op = "GT"; error = "1" },
+    @{ metric = "security_rating"; op = "GT"; error = "1" },
+    @{ metric = "coverage"; op = "LT"; error = "80" },
+    @{ metric = "duplicated_lines_density"; op = "GT"; error = "3" },
+    @{ metric = "security_hotspots_reviewed"; op = "LT"; error = "100" },
+    @{ metric = "violations"; op = "GT"; error = "0" },
+    @{ metric = "new_reliability_rating"; op = "GT"; error = "1" },
+    @{ metric = "new_security_rating"; op = "GT"; error = "1" },
+    @{ metric = "new_maintainability_rating"; op = "GT"; error = "1" },
+    @{ metric = "new_coverage"; op = "LT"; error = "80" },
+    @{ metric = "new_duplicated_lines_density"; op = "GT"; error = "3" },
+    @{ metric = "new_security_hotspots_reviewed"; op = "LT"; error = "100" }
+)
+
+$gateDetails = Invoke-SonarGet -Path "/api/qualitygates/show?name=$([Uri]::EscapeDataString($GateName))"
+$existingMetrics = @($gateDetails.conditions | ForEach-Object { $_.metric })
+foreach ($condition in $conditions) {
+    if ($existingMetrics -contains $condition.metric) {
+        continue
+    }
+
+    try {
+        $null = Invoke-SonarPost -Path "/api/qualitygates/create_condition" -Body @{
+            gateName = $GateName
+            metric = $condition.metric
+            op = $condition.op
+            error = $condition.error
+        }
+        Write-Host "Added quality-gate condition '$($condition.metric)'."
+    }
+    catch {
+        Write-Warning "Could not add gate condition '$($condition.metric)'. The installed edition/version may not expose that metric: $($_.Exception.Message)"
+    }
 }
 
 $null = Invoke-SonarPost -Path "/api/qualitygates/select" -Body @{
@@ -89,5 +100,5 @@ $null = Invoke-SonarPost -Path "/api/qualitygates/select" -Body @{
     projectKey = $ProjectKey
 }
 
-Write-Host "Assigned '$GateName' to '$ProjectKey' (gate ID $gateId)."
+Write-Host "Assigned quality gate '$GateName' to '$ProjectKey'."
 Write-Host "Project URL: $HostUrl/dashboard?id=$([Uri]::EscapeDataString($ProjectKey))"
