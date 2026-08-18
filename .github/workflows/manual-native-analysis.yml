@@ -17,6 +17,8 @@ on:
 permissions:
   contents: read
   code-quality: write
+  actions: read
+  security-events: read
 
 jobs:
   test-and-coverage:
@@ -96,3 +98,68 @@ jobs:
         with:
           category: /language:csharp/manual
           upload: always
+
+  github-native-summary:
+    name: GitHub-native results summary
+    if: always()
+    needs:
+      - test-and-coverage
+      - codeql
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      security-events: read
+      code-quality: read
+    steps:
+      - name: Collect all GitHub-native result counts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          REF_NAME: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          quality_setup="$(gh api "repos/${REPOSITORY}/code-quality/setup")"
+          quality_findings="$(gh api "repos/${REPOSITORY}/code-quality/findings?per_page=100&state=open")"
+          codeql_alerts="$(gh api "repos/${REPOSITORY}/code-scanning/alerts?per_page=100&state=open&ref=refs/heads/${REF_NAME}")"
+          dependabot_alerts="$(gh api "repos/${REPOSITORY}/dependabot/alerts?per_page=100&state=open")"
+          secret_alerts="$(gh api "repos/${REPOSITORY}/secret-scanning/alerts?per_page=100&state=open")"
+
+          quality_count="$(jq 'length' <<< "$quality_findings")"
+          codeql_count="$(jq 'length' <<< "$codeql_alerts")"
+          critical_count="$(jq '[.[] | select(.rule.security_severity_level == "critical")] | length' <<< "$codeql_alerts")"
+          high_count="$(jq '[.[] | select(.rule.security_severity_level == "high")] | length' <<< "$codeql_alerts")"
+          dependabot_count="$(jq 'length' <<< "$dependabot_alerts")"
+          secret_count="$(jq 'length' <<< "$secret_alerts")"
+          quality_state="$(jq -r '.state' <<< "$quality_setup")"
+          quality_languages="$(jq -r '.languages | join(", ")' <<< "$quality_setup")"
+          ai_option="$(jq -r '.ai_findings_option // "disabled"' <<< "$quality_setup")"
+
+          cat >> "$GITHUB_STEP_SUMMARY" <<EOF
+          # GitHub-native analysis summary
+
+          **Commit:** \\`${GITHUB_SHA:0:12}\\`  
+          **Branch:** \\`${REF_NAME}\\`
+
+          | Component | Result |
+          | --- | ---: |
+          | Code Quality state | **${quality_state}** |
+          | Code Quality languages | ${quality_languages} |
+          | Open Code Quality findings | **${quality_count}** |
+          | Open CodeQL alerts | **${codeql_count}** (${critical_count} critical, ${high_count} high) |
+          | Open Dependabot alerts | **${dependabot_count}** |
+          | Open Secret Scanning alerts | **${secret_count}** |
+          | AI findings option | **${ai_option}** |
+
+          ## Where to inspect details
+
+          - [Code Quality Standard findings](https://github.com/${REPOSITORY}/security/code-quality)
+          - [Code scanning alerts](https://github.com/${REPOSITORY}/security/code-scanning)
+          - [Dependabot vulnerabilities](https://github.com/${REPOSITORY}/security/dependabot)
+          - [Secret Scanning alerts](https://github.com/${REPOSITORY}/security/secret-scanning)
+          - [This workflow run](https://github.com/${REPOSITORY}/actions/runs/${GITHUB_RUN_ID})
+
+          > GitHub Code Quality is managed by GitHub and is triggered by pushes, pull requests, and its configured schedule. This summary reads its latest stored repository findings; it does not duplicate or replace the managed Code Quality engine.
+          EOF
