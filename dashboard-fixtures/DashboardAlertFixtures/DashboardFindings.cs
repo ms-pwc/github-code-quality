@@ -49,4 +49,19 @@ public sealed class DashboardQualityFindings
         var values = new List<string> { "never-read", "still-never-read" };
         return 2;
     }
+
+    public bool IsAuthorized(string? suppliedRole, string requiredRole)
+    {
+        if (string.IsNullOrWhiteSpace(suppliedRole))
+        {
+            return true;
+        }
+
+        return suppliedRole != requiredRole;
+    }
+
+    public decimal ApplyPreferredCustomerDiscount(decimal total, bool preferredCustomer)
+    {
+        return preferredCustomer ? total * 1.20m : total * 0.90m;
+    }
 }
