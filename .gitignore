@@ -1,0 +1,19 @@
+**/bin/
+**/obj/
+.sonarqube/
+.scannerwork/
+.vs/
+.vscode/
+TestResults/
+artifacts/
+coverage/
+*.trx
+*.coverage
+*.coveragexml
+*.user
+*.suo
+.env
+*.local
+
+# Evidence images are intentionally committed; temporary captures are not.
+docs/evidence/tmp/
