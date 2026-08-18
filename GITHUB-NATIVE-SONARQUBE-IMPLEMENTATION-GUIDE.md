@@ -839,7 +839,70 @@ After acceptance:
 
 ---
 
-## 23. Reference implementation in this repository
+## 23. Running a manual full analysis after a commit
+
+Yes. This repository includes [Manual GitHub-native analysis](.github/workflows/manual-native-analysis.yml).
+
+### Run it from the GitHub UI
+
+1. Open the repository **Actions** tab.
+2. Select **Manual GitHub-native analysis**.
+3. Select **Run workflow**.
+4. Select the branch or commit to analyze.
+5. Choose:
+  - **Run CodeQL security analysis** = `true` to run and upload CodeQL results.
+  - **Fail the run when coverage is below 80 percent** = `true` to enforce the coverage check.
+6. Select **Run workflow**.
+7. Open the run and inspect the test/coverage and CodeQL jobs.
+
+### What the manual workflow does
+
+```text
+Selected commit
+   ├── Build and test
+   ├── Generate Cobertura coverage
+   ├── Upload coverage to GitHub Code Quality
+   ├── Optional 80% coverage gate
+   └── Optional CodeQL security scan
+        └── Upload SARIF to GitHub Code Scanning
+```
+
+The CodeQL job publishes results automatically to **Security and quality → Code scanning**. The coverage job publishes the report to GitHub Code Quality and stores the result in the Actions run.
+
+### Important Code Quality distinction
+
+The GitHub-managed **Code Quality** analysis is not a normal repository YAML job that can be called directly. GitHub manages its workflow internally. It runs on pushes/default-branch analysis and pull-request analysis after Code Quality is enabled.
+
+Therefore:
+
+- A manual run can explicitly execute tests, coverage, and CodeQL.
+- GitHub Code Quality runs through its managed GitHub configuration.
+- To refresh Code Quality after a source commit, push to the configured branch or use the Code Quality repository settings/managed workflow controls.
+- Do not create a second custom Code Quality workflow unless GitHub documentation explicitly supports that configuration; duplicate quality workflows can create confusing results.
+
+### What to check after the manual run
+
+| Result | Location |
+| --- | --- |
+| Test/build result | Manual workflow run → **Manual tests and coverage** |
+| Coverage upload | PR/default-branch Code Quality coverage view and workflow log |
+| Coverage threshold | **Enforce coverage threshold** step |
+| CodeQL security result | **Security and quality → Code scanning** |
+| CodeQL SARIF upload | Manual workflow run → **Manual CodeQL security** |
+| Managed Code Quality result | **Security and quality → Code Quality → Standard findings** |
+| Merge enforcement | Pull request checks and repository ruleset |
+
+### Manual run limitations
+
+- A manual workflow run does not automatically create pull-request inline comments unless it is associated with a pull-request event.
+- CodeQL alerts are uploaded to the selected branch/commit, but PR annotations require a PR analysis context.
+- Coverage comparison is most useful when the default branch has an established baseline and the run is associated with a PR.
+- CodeQL, Code Quality, coverage, Dependabot, and Secret Scanning remain separate result stores; no single manual run page aggregates every result.
+- The manual workflow does not create native duplication, complexity, or technical-debt metrics.
+
+---
+
+## 24. Reference implementation in this repository
 
 - [Concise capability demonstration](docs/SONARQUBE-TO-GITHUB-NATIVE-DEMO.md)
 - [Dashboard alert status](docs/reports/DASHBOARD-ALERT-STATUS.md)

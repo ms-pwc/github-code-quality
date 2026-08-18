@@ -1,0 +1,98 @@
+name: Manual GitHub-native analysis
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_codeql:
+        description: Run CodeQL security analysis
+        required: true
+        default: true
+        type: boolean
+      enforce_coverage:
+        description: Fail the run when coverage is below 80 percent
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  code-quality: write
+
+jobs:
+  test-and-coverage:
+    name: Manual tests and coverage
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      code-quality: write
+    steps:
+      - name: Check out selected commit
+        uses: actions/checkout@v6
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 9.0.x
+          cache: true
+          cache-dependency-path: '**/*.csproj'
+
+      - name: Restore
+        run: dotnet restore CodeQualityPoc.sln
+
+      - name: Build
+        run: dotnet build CodeQualityPoc.sln --configuration Release --no-restore
+
+      - name: Test and generate Cobertura coverage
+        run: >-
+          dotnet test tests/QualityDemo.Tests/QualityDemo.Tests.csproj
+          --configuration Release
+          --no-build
+          --logger "trx;LogFileName=manual-tests.trx"
+          /p:CollectCoverage=true
+          /p:CoverletOutput=${{ github.workspace }}/artifacts/coverage/coverage
+          /p:CoverletOutputFormat=cobertura
+          /p:ExcludeByFile=**/Program.cs
+
+      - name: Upload coverage to GitHub Code Quality
+        uses: actions/upload-code-coverage@v1
+        with:
+          file: artifacts/coverage/coverage.cobertura.xml
+          language: C#
+          label: code-coverage/manual
+
+      - name: Enforce coverage threshold
+        if: inputs.enforce_coverage
+        shell: pwsh
+        run: >-
+          ./scripts/Test-CoverageThreshold.ps1
+          -CoverageFile artifacts/coverage/coverage.cobertura.xml
+          -MinimumPercent 80
+
+  codeql:
+    name: Manual CodeQL security
+    if: inputs.run_codeql
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+    steps:
+      - name: Check out selected commit
+        uses: actions/checkout@v6
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: csharp
+          queries: security-extended
+          build-mode: autobuild
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v4
+
+      - name: Analyze and upload CodeQL results
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:csharp/manual
+          upload: always
