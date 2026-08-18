@@ -29,10 +29,11 @@ observed results are populated only after each analyzer completes.
 | REL-07 | Reliability | Invalid composite format string | `InvalidFormatString` | Bug | Code Quality reliability/error |
 | REL-08 | Reliability | Self-assignment | `SelfAssignment` | Bug/code smell | Code Quality reliability/error |
 | REL-09 | Reliability | Disposable stream not disposed | `MissingDispose` | Bug/code smell | Code Quality reliability/warning |
-| REL-10 | Reliability | Non-short-circuit operator can dereference null | `DangerousNonShortCircuit` | Bug | Code Quality reliability/error |
-| REL-11 | Reliability | Empty catch | `EmptyCatch` | Code smell | Code Quality reliability/note |
-| REL-12 | Reliability | Locking on `this` | `LockPublicObject` | Code smell/bug | Code Quality reliability/warning |
-| REL-13 | Reliability | Explicit garbage collection | `ForceGarbageCollection` | Code smell | Code Quality reliability/warning |
+| REL-10 | Reliability | Empty collection size compared below zero | `ImpossibleNegativeCount` | Bug | Code Quality reliability/error |
+| REL-11 | Reliability | Non-short-circuit operator can dereference null | `DangerousNonShortCircuit` | Bug | Code Quality reliability/error |
+| REL-12 | Reliability | Empty catch | `EmptyCatch` | Code smell | Code Quality reliability/note |
+| REL-13 | Reliability | Locking on `this` | `LockPublicObject` | Code smell/bug | Code Quality reliability/warning |
+| REL-14 | Reliability | Explicit garbage collection | `ForceGarbageCollection` | Code smell | Code Quality reliability/warning |
 | MAINT-01 | Maintainability | Constant/redundant Boolean conditions | `ConstantAndRedundantConditions` | Code smells | Code Quality maintainability |
 | MAINT-02 | Maintainability | Combinable nested conditions | `NestedConditions` | Code smell | Code Quality maintainability/note |
 | MAINT-03 | Maintainability | Useless assignments and calls | `UselessAssignments` | Code smells | Code Quality maintainability/warning |

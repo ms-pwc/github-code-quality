@@ -27,6 +27,30 @@ combined control plane, not CodeQL alone.
 The workflow checks out the pull-request head SHA instead of the synthetic
 merge commit so coverage line numbers map to the source diff.
 
+## Verified POC result
+
+Run date: **18 August 2026**. Pull request:
+<https://github.com/ms-pwc/github-code-quality/pull/1>.
+
+| Evidence | Observed result |
+| --- | --- |
+| CodeQL security | 11 open alerts: 2 critical, 4 high, and 5 medium. |
+| GitHub Code Quality | 10 inline findings from `github-code-quality[bot]`: 9 reliability and 1 maintainability. |
+| Coverage | 3% on `github-native-poc` versus 35% on the initial `main` baseline; a 32-point drop. |
+| Safe tests | 6 passed; no vulnerable method was executed. |
+| Dependency review | Passed; no vulnerable dependency change was introduced. |
+| Secret scanning | Enabled with push protection; 0 open alerts. |
+| Merge result | **Blocked** by the active ruleset and failing CodeQL security check. |
+
+Representative Code Quality findings included definite null dereference,
+off-by-one array access, invalid formatting, self-assignment, an unread
+collection, an empty collection, incorrect `StringBuilder` construction,
+`ReferenceEquals` on value types, and unsafe non-short-circuit logic.
+
+The Code Quality REST findings list is empty because it reports the safe default
+branch. Pull-request findings are preserved in the exported review-comment JSON
+and in the live inline discussions.
+
 ## Where to look in GitHub
 
 | Evidence | Location |
@@ -65,6 +89,12 @@ are product-managed rules. The coverage restriction is currently public
 preview. Calibrate in evaluate mode before production enforcement; this public
 POC activates the normal merge controls only after checks exist so the default
 branch cannot be accidentally locked.
+
+The active ruleset is
+<https://github.com/ms-pwc/github-code-quality/rules/20972666>. It requires a
+pull request, one approval, code-owner review, resolved conversations, CI,
+dependency review, CodeQL analysis, and no high-or-critical CodeQL security
+alerts. Organization administrators retain an audited emergency bypass.
 
 ## Export evidence
 
